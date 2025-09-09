@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f7e1d7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:focus{
+  outline: 2px solid white;
+}
+
+
+.heading1{
+  font-family: 'Helvetica';
+}
+
+.die-button{
+  font-family: 'Fredoka';
+  box-shadow:  1px 5px 2px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  color: black;
+  font-size: var(--text-5xl);
+  font-weight: bold;
+  border-radius: var(--radius-md);
+  padding-block: calc(var(--spacing));
+  padding-inline: calc(var(--spacing) * 5);
+  transition: all 0.3s ease-in-out;
+}
+
+.die-button:hover{
+  background-color: #80ed99;
+  cursor: pointer;
+}
+
+.held-button{
+  font-family: 'Fredoka';
+  color: white;
+  box-shadow:  1px 5px 2px rgba(0, 0, 0, 0.4);
+  font-size: var(--text-5xl);
+  font-weight: bold;
+  border-radius: var(--radius-md);
+  padding-block: calc(var(--spacing));
+  padding-inline: calc(var(--spacing) * 5);
+  transition: all 0.3s ease-in-out;
+  background-color: #80ed99;
+}
+
+.held-button:hover{
+  background-color: #80ed99;
+  cursor: pointer;
+}
+
+@media (width < 40rem /* 640px */) {
+  .die-button, .held-button{
+    font-size: var(--text-2xl);
+    padding-inline: calc(var(--spacing) * 3);
+  }
+}
+
+@media (width > 365px ) and (width < 40rem ) {
+  .die-button, .held-button{
+    font-size: var(--text-3xl);
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .die-container{
+    gap: calc(var(--spacing) * 8);
+  }
+}
