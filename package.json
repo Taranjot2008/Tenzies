@@ -3,14 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://taranjot2008.github.io/Tenzies/",
+  "homepage": "https://taranjot2008.github.io/Tenzies",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "nanoid": "^5.1.5",
