@@ -27,7 +27,8 @@ export default function Header() {
             <p className='heading-text md:text-xl max-sm:text-lg text-[#5c3a2e] font-medium
             max-sm:text-center max-sm:px-2 max-[340px]:text-[12px] lg:text-2xl dark:text-white'>Roll all dice until all dice are same. Start a new game once you are finished</p>
 
-            <div className="theme-switcher absolute top-10 right-10 text-3xl flex gap-4">
+            <div className="theme-switcher absolute top-10 right-10 text-3xl flex gap-4
+            max-sm:top-0 max-sm:right-10">
                 {darkState ? <span className='w-10 h-10 p-4 rounded-full bg-white flex items-center justify-center'>
                     <i className="fa-solid fa-moon hover:cursor-pointer text-[#495057] transition duration-300"
                     onClick={() => setDarkState(prev => !prev)}
