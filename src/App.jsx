@@ -55,9 +55,17 @@ export default function App() {
   useEffect(() => {
     if (gameWon) {
       buttonRef.current.focus()
-      setPoints(prev => prev + 250)
+      if (rolls === 'easy'){
+        setPoints(prev => prev + 250)
+      }
+      else if (rolls === 'medium') {
+        setPoints(prev => prev + 400)
+      }
+      else if (rolls === 'hard') {
+        setPoints(prev => prev + 500)
+      }
     }
-  }, [gameWon])
+  }, [gameWon, rolls])
 
   function generateallNewDice() {
 
@@ -112,7 +120,7 @@ export default function App() {
         <div className="won-div flex flex-col items-center gap-6 text-black max-sm:gap-2">
           <p className='won-text text-7xl font-extrabold text-purple-600 max-sm:text-4xl'>Woo Hoo!</p>
           <p className="won-emoji text-6xl max-sm:text-4xl">🥳</p>
-          <p className="won-points text-[#ffb700] text-2xl font-bold max-sm:text-lg">You won 250 coins!!</p>
+          {/*<p className="won-points text-[#ffb700] text-2xl font-bold max-sm:text-lg">You won 250 coins!!</p>*/}
           <p className="won-subheading text-2xl text-center p-2 text-[#5c3a2e] font-medium max-sm:text-lg">Click "New Game" to win again! or <span className='text-red-600 font-(family-name:--evil-font) text-3xl'>Lose</span> 
             <span className='text-4xl max-sm:text-lg'>😈</span>
           </p>
